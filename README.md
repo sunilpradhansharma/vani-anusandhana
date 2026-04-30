@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="logo.png" alt="vāṇī-anusandhāna — A Disciplined Inquiry Into Sacred Vedic Teachings" width="320"/>
+</div>
+
 # vāṇī-anusandhāna 🪷
 
 > **वाणी-अनुसन्धान** — AI-powered semantic search and RAG engine for disciplined inquiry into sacred Vedic teachings and wisdom
