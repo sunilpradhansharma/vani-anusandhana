@@ -1,0 +1,63 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# ── Project-specific ──────────────────────────────────────────────────────────
+# Audio files: downloaded by yt-dlp, deleted after transcription succeeds.
+# Never commit — large binary files, re-downloadable.
+data/audio/
+
+# Transcripts: the canonical output of mlx-whisper. Local-only (can be large).
+# Back these up separately (external drive, cloud storage). Do NOT commit to git.
+data/transcripts/
+
+# Chunks: derived from transcripts + normalization. Rebuildable via
+# scripts/07_chunk_transcripts.py — safe to exclude from git.
+data/chunks/
+
+# Qdrant vector database storage. Rebuildable from chunks via
+# scripts/08_index_chunks.py — never commit.
+qdrant_storage/
+
+# Logs and secrets
+logs/
+*.log
+.env
+.env.local
+
+# ── IDE / editor ──────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# ── HuggingFace model cache ───────────────────────────────────────────────────
+# Model weights live in ~/.cache/huggingface/ on your local machine.
+# They are NOT in the repo and should not be committed (multi-GB files).
+# Re-downloaded automatically on first run of verify_setup.py.
+# The path below is a reminder only — ~/.cache is outside the repo anyway.
+# ~/.cache/huggingface/

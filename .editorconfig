@@ -1,0 +1,40 @@
+# EditorConfig — https://editorconfig.org
+#
+# UTF-8 required throughout this project.
+# Sanskrit diacritics (ā ī ū ṭ ḍ ṇ ś ṣ ṁ ḥ etc.) must not be corrupted
+# by encoding mismatches or line-ending conversions. Every editor working
+# on this project must honour this file.
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.{yaml,yml}]
+indent_style = space
+indent_size = 2
+
+[*.json]
+indent_style = space
+indent_size = 2
+
+[*.md]
+indent_style = space
+indent_size = 2
+# Trailing whitespace in Markdown can be intentional (line breaks).
+# Disable trimming for .md files to avoid mangling formatted text.
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
+
+[*.sh]
+indent_style = space
+indent_size = 4
