@@ -1,15 +1,19 @@
 <div align="center">
-  <img src="assets/logo.png" alt="vāṇī-anusandhāna — A Disciplined Inquiry Into Sacred Vedic Teachings" width="320"/>
-</div>
+
+<img src="assets/logo_hero_240.png" width="160" alt="vāṇī-anusandhāna logo: a Vaiṣṇava tilaka inside a sun-rayed medallion with lotus crown above an open book and magnifying glass" />
 
 # vāṇī-anusandhāna 🪷
 
-> **वाणी-अनुसन्धान** — AI-powered semantic search and RAG engine for disciplined inquiry into sacred Vedic teachings and wisdom
+> **वाणी-अनुसन्धान** — A disciplined inquiry into Vedic wisdom, based strictly on the lectures of [HH Romapada Swami](https://www.romapadaswami.com/).
 
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)
-[![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-optimized-black.svg)](https://developer.apple.com/documentation/apple-silicon)
-[![AI answers: zero hallucinations](https://img.shields.io/badge/AI%20answers-zero%20hallucinations-brightgreen.svg)](#design-philosophy)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
+[![Apple Silicon](https://img.shields.io/badge/Apple_Silicon-optimized-black.svg)](https://developer.apple.com/documentation/apple-silicon)
+[![AI answers: zero hallucinations](https://img.shields.io/badge/AI_answers-zero_hallucinations-brightgreen.svg)](#design-philosophy)
+
+</div>
+
+---
 
 Semantic search over a single spiritual teacher's YouTube lectures. Devotees ask a question in plain language and receive the exact moments in the teacher's videos where that topic is addressed — with timestamped deep-links, transcript snippets, and a direct jump into the recording. Every answer is the teacher's actual words, retrieved not generated. The system runs entirely on a MacBook Pro with Apple Silicon, costs near zero to operate, and is designed to scale from a 25-video pilot to a 5,000-video archive without changing architecture.
 
@@ -30,6 +34,132 @@ Semantic search over a single spiritual teacher's YouTube lectures. Devotees ask
 | 4 | Nārada-bhakti-sūtra Study | [52:44 → 53:59](https://www.youtube.com/watch?v=EXAMPLE4&t=3164s) | *"...one who hears constantly develops the faculty of continuous remembrance. This is why the guru says: hear first, for one year, two years. Smaraṇa will come..."* |
 
 **No AI-generated answers. No paraphrasing. No hallucinations. The teacher's actual words are the answer.**
+
+---
+
+## User experience
+
+vāṇī-anusandhāna is designed mobile-first. Devotees searching from a phone
+during morning sādhana, evening reflection, or while traveling should feel
+the difference between this and a generic AI tool the moment they arrive.
+The interface is calm, reverent, and purposeful — the teacher's words are
+the visual hero, and the search machinery quietly steps aside once results
+arrive.
+
+<div align="center">
+<table>
+<tr>
+<td align="center" valign="top" width="50%">
+
+**Home — the invitation**
+
+<img src="docs/mockups/home_screen.png" width="320" alt="vāṇī-anusandhāna home screen on mobile showing the logo, search box with 'Ask your question…' placeholder, and a Tulasi-leaf illustration above an invitational verse"/>
+
+<sub>Hero logo · disciplined-inquiry tagline · invitational verse · Tulasi-leaf motif</sub>
+
+</td>
+<td align="center" valign="top" width="50%">
+
+**Results — with full transcript**
+
+<img src="docs/mockups/results_screen.png" width="320" alt="vāṇī-anusandhāna search results screen showing an embedded video player with timestamp range, the result title and metadata, a transcript snippet with Sanskrit terms highlighted, and three icon actions for favorite, share, and copy"/>
+
+<sub>Embedded YouTube · transcript with Devanagari hover · favorite, share, copy timestamp</sub>
+
+</td>
+</tr>
+</table>
+</div>
+
+### How a devotee uses it
+
+1. **Opens the app on their phone.** Sees the logo, the wordmark in maroon
+   serif, and a single search box. Below it: a Tulasi-leaf illustration and
+   a quiet verse — *"Through this inquiry, the seeker feels the teacher's
+   guidance speaking through his own lectures."*
+
+2. **Types a question** in plain language: *"What is the difference between
+   śravaṇa and smaraṇa?"* — no special syntax, no special keywords.
+
+3. **Sees four results within a second.** Each result is a card with:
+   - The teacher's actual lecture title
+   - An embedded YouTube player ready to play from the exact moment
+   - A timestamp range like *12:34 → 13:42* showing the duration of the
+     relevant passage
+   - The full transcript of that 60–90 seconds — readable, in serif, with
+     Sanskrit terms gently highlighted
+   - Three small actions: favorite, share, copy timestamp
+
+4. **Taps a Sanskrit term** in the transcript and a small popover appears
+   showing the term in Devanagari (श्रवण) with a brief gloss ("listening,
+   hearing"). For devotees who want all Sanskrit shown in Devanagari
+   inline, a toggle in the header switches the display globally.
+
+5. **Saves a passage** to favorites, shares it with a fellow devotee, or
+   copies a deep-link timestamp to revisit later. All saved data lives on
+   their device — no account required.
+
+### Designed for the way devotees actually search
+
+📱 **Mobile-first.** Single column, large tap targets, transcripts that
+read like a book, not a webpage. Most devotees will use this from a phone
+during quiet moments of practice — the design assumes that, not the
+opposite.
+
+🎬 **Embedded video + transcript together.** Click a result and the player
+and the teacher's transcribed words appear together in context — no
+jumping to YouTube and losing your place. A secondary "Open in YouTube"
+link is always available for those who prefer the YouTube app.
+
+🪷 **Calm, devotional aesthetic.** Cream and saffron with deep maroon text.
+Georgia serif for the teacher's words. Subtle Tulasi-leaf motif in the
+empty state — the only ornamental flourish; everything else relies on
+typography and color.
+
+🔤 **Sanskrit-aware typography.** Tap any Sanskrit term to see its
+Devanagari spelling and a brief gloss. Optional toggle to show Devanagari
+for all terms inline. Sanskrit diacritics (ā, ṇ, ī, ś) render correctly
+across the entire interface.
+
+💝 **Personal practice tools.** Search history, favorited passages, one-tap
+sharing via the Web Share API, copy-deeplink-with-timestamp — everything
+stored locally on your device. Optional sync across devices is on the
+roadmap; v1 is fully local-first.
+
+🤐 **No ads, no tracking, no AI-generated answers.** What you see is what
+HH Romapada Swami said. Nothing added, nothing inferred. No analytics
+beacons, no third-party scripts, no fingerprinting.
+
+### Visual identity
+
+| Token | Hex | Use |
+|---|---|---|
+| Cream | `#FBF6EC` | Page background |
+| Cream-soft | `#FFFCF6` | Card surface, input background |
+| Saffron | `#E8862A` | Primary accent, toggles, badges |
+| Maroon | `#5C1A1A` | Primary text, primary buttons |
+| Gold | `#C49B3F` | Logo accents, dotted underlines |
+| Brown-warm | `#8B6F47` | Secondary text, metadata |
+
+**Typography stack:**
+- **Body & transcripts:** Georgia, Charter, Iowan Old Style — serif, like a book
+- **UI chrome:** -apple-system, BlinkMacSystemFont, Segoe UI — system sans
+- **Devanagari:** Noto Sans Devanagari — loaded only when Devanagari is enabled
+- **Numbers:** tabular-nums variant — so 12:34 aligns with 13:42
+
+### What this UI deliberately does NOT do
+
+- ❌ No AI-generated answers, summaries, or paraphrases — retrieval only
+- ❌ No autocomplete in v1 (resist scope creep; add later if devotees ask)
+- ❌ No social-network features (likes, comments, public profiles)
+- ❌ No dark mode in v1 (the warm Vaiṣṇava palette is a daylight palette by design)
+- ❌ No multi-language UI in v1 (English with optional Sanskrit Devanagari)
+- ❌ No login required for basic search (favorites/history live on device)
+
+The full design system — palette specifications, typography scale, component
+patterns, accessibility requirements, mobile breakpoints, animation
+philosophy — will be documented in `UI_DESIGN.md` (created during UI
+implementation).
 
 ---
 
@@ -342,12 +472,31 @@ The AGPL was chosen deliberately: if you deploy a modified version of this syste
 
 ## Acknowledgments
 
-- The teacher, whose lectures are the entire reason this project exists, and whose consistent, decades-long service made a 5,000-video corpus possible.
-- The [MLX team at Apple](https://github.com/ml-explore/mlx) for making Apple Silicon a first-class ML platform.
-- [BAAI](https://www.baai.ac.cn/) for bge-m3 and bge-reranker-v2-m3 — free, multilingual, locally runnable, and genuinely competitive.
-- [OpenAI](https://openai.com/research/whisper) for open-sourcing Whisper.
-- [Qdrant](https://qdrant.tech/) for a vector database that is both powerful and free to self-host.
-- The devotees who test, ask questions, report errors, and make this system more accurate over time.
+This project exists in service of **HH Romapada Swami's** decades of
+patient transmission. Every searchable moment in this index is his words;
+the system is merely the librarian. Permission to index his publicly
+available lectures was kindly granted by his ministry.
+
+In the paramparā: His Divine Grace A.C. Bhaktivedanta Swami **Śrīla
+Prabhupāda** — founder-ācārya of the International Society for Krishna
+Consciousness, in whose direct line HH Romapada Swami serves as initiating
+guru.
+
+Technical foundations from the open-source community:
+
+- [MLX team at Apple](https://github.com/ml-explore/mlx) for making Apple
+  Silicon a first-class ML platform
+- [BAAI](https://huggingface.co/BAAI) for `bge-m3` and `bge-reranker-v2-m3`
+  — free, multilingual, locally runnable, genuinely competitive embeddings
+- [OpenAI](https://github.com/openai/whisper) for open-sourcing Whisper
+- [Qdrant](https://qdrant.tech/) for a vector database that is both
+  powerful and free to self-host
+
+And to the devotees who test, ask thoughtful questions, report
+mis-transcribed Sanskrit terms, and gradually make the system more
+faithful to its source.
+
+🪷 **Hare Kṛṣṇa**
 
 ---
 

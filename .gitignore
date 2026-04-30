@@ -55,6 +55,16 @@ Icon?
 .Spotlight-V100
 .Trashes
 
+# ── UI assets and mockups — always tracked ────────────────────────────────────
+# Override any broader image-ignore patterns to ensure these are committed.
+!assets/
+!assets/*.png
+!assets/*.svg
+!docs/
+!docs/mockups/
+!docs/mockups/*.png
+!docs/mockups/README.md
+
 # ── HuggingFace model cache ───────────────────────────────────────────────────
 # Model weights live in ~/.cache/huggingface/ on your local machine.
 # They are NOT in the repo and should not be committed (multi-GB files).
