@@ -47,9 +47,28 @@ the visual hero, and the search machinery quietly steps aside once results
 arrive.
 
 <div align="center">
-<img src="assets/mock1.png" width="300" alt="Home screen — logo, search box, invitational verse"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/mock2.png" width="300" alt="Results screen — embedded video, transcript, timestamp"/>
+<table>
+<tr>
+<td align="center" valign="top" width="50%">
 
-*Home — the invitation* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Results — with full transcript*
+**Home — the invitation**
+
+<img src="docs/mockups/home_screen.png" width="320" alt="vāṇī-anusandhāna home screen on mobile showing the logo, search box with 'Ask your question…' placeholder, and a Tulasi-leaf illustration above an invitational verse"/>
+
+<sub>Hero logo · disciplined-inquiry tagline · invitational verse · Tulasi-leaf motif</sub>
+
+</td>
+<td align="center" valign="top" width="50%">
+
+**Results — with full transcript**
+
+<img src="docs/mockups/results_screen.png" width="320" alt="vāṇī-anusandhāna search results screen showing an embedded video player with timestamp range, the result title and metadata, a transcript snippet with Sanskrit terms highlighted, and three icon actions for favorite, share, and copy"/>
+
+<sub>Embedded YouTube · transcript with Devanagari hover · favorite, share, copy timestamp</sub>
+
+</td>
+</tr>
+</table>
 </div>
 
 ### How a devotee uses it
@@ -453,10 +472,9 @@ The AGPL was chosen deliberately: if you deploy a modified version of this syste
 
 ## Acknowledgments
 
-This project exists in service of **HH Romapada Swami's** decades of
-patient transmission. Every searchable moment in this index is his words;
-the system is merely the librarian. Permission to index his publicly
-available lectures was kindly granted by his ministry.
+This project exists in service of **HH Romapada Swami's** teachings. Every searchable moment in this index is his words;
+the system is merely the librarian. Permission to index His publicly
+available lectures was kindly granted by His ministry.
 
 In the paramparā: His Divine Grace A.C. Bhaktivedanta Swami **Śrīla
 Prabhupāda** — founder-ācārya of the International Society for Krishna
