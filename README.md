@@ -47,28 +47,9 @@ the visual hero, and the search machinery quietly steps aside once results
 arrive.
 
 <div align="center">
-<table>
-<tr>
-<td align="center" valign="top" width="50%">
+<img src="docs/mockups/home_screen.png" width="300" alt="Home screen — logo, search box, invitational verse"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="docs/mockups/results_screen.png" width="300" alt="Results screen — embedded video, transcript, timestamp"/>
 
-**Home — the invitation**
-
-<img src="docs/mockups/home_screen.png" width="320" alt="vāṇī-anusandhāna home screen on mobile showing the logo, search box with 'Ask your question…' placeholder, and a Tulasi-leaf illustration above an invitational verse"/>
-
-<sub>Hero logo · disciplined-inquiry tagline · invitational verse · Tulasi-leaf motif</sub>
-
-</td>
-<td align="center" valign="top" width="50%">
-
-**Results — with full transcript**
-
-<img src="docs/mockups/results_screen.png" width="320" alt="vāṇī-anusandhāna search results screen showing an embedded video player with timestamp range, the result title and metadata, a transcript snippet with Sanskrit terms highlighted, and three icon actions for favorite, share, and copy"/>
-
-<sub>Embedded YouTube · transcript with Devanagari hover · favorite, share, copy timestamp</sub>
-
-</td>
-</tr>
-</table>
+*Home — the invitation* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Results — with full transcript*
 </div>
 
 ### How a devotee uses it
