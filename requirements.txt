@@ -1,0 +1,22 @@
+# Core transcription — Apple Silicon native (GPU + Neural Engine)
+mlx-whisper
+
+# YouTube audio download
+yt-dlp
+
+# Embeddings
+sentence-transformers>=2.7
+FlagEmbedding                  # bge-m3 dense + sparse in one pass
+
+# Vector database
+qdrant-client>=1.9
+
+# API server
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+
+# Utilities
+tqdm
+rapidfuzz                      # Sanskrit fuzzy normalization (Layer 2)
