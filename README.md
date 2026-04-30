@@ -182,7 +182,7 @@ The full system — pilot through public deployment — costs under $300 one-tim
 ### Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/vani-anusandhana.git
+git clone https://github.com/sunilpradhansharma/vani-anusandhana.git
 cd vani-anusandhana
 make setup              # installs deps, pulls Qdrant image, starts container
 python verify_setup.py  # should print: ✅ environment ready
