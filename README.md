@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="logo.png" alt="vāṇī-anusandhāna — A Disciplined Inquiry Into Sacred Vedic Teachings" width="320"/>
+  <img src="logo.png?v=2" alt="vāṇī-anusandhāna — A Disciplined Inquiry Into Sacred Vedic Teachings" width="320"/>
 </div>
 
 # vāṇī-anusandhāna 🪷
