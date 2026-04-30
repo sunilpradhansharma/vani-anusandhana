@@ -53,7 +53,7 @@ arrive.
 
 **Home — the invitation**
 
-<img src="docs/mockups/home_screen.png" width="320" alt="vāṇī-anusandhāna home screen on mobile showing the logo, search box with 'Ask your question…' placeholder, and a Tulasi-leaf illustration above an invitational verse"/>
+<img src="assets/mock1.png" width="320" alt="vāṇī-anusandhāna home screen on mobile showing the logo, search box with 'Ask your question…' placeholder, and a Tulasi-leaf illustration above an invitational verse"/>
 
 <sub>Hero logo · disciplined-inquiry tagline · invitational verse · Tulasi-leaf motif</sub>
 
@@ -62,7 +62,7 @@ arrive.
 
 **Results — with full transcript**
 
-<img src="docs/mockups/results_screen.png" width="320" alt="vāṇī-anusandhāna search results screen showing an embedded video player with timestamp range, the result title and metadata, a transcript snippet with Sanskrit terms highlighted, and three icon actions for favorite, share, and copy"/>
+<img src="assets/mock2.png" width="320" alt="vāṇī-anusandhāna search results screen showing an embedded video player with timestamp range, the result title and metadata, a transcript snippet with Sanskrit terms highlighted, and three icon actions for favorite, share, and copy"/>
 
 <sub>Embedded YouTube · transcript with Devanagari hover · favorite, share, copy timestamp</sub>
 
