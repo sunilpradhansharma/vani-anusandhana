@@ -44,34 +44,52 @@ Together: **vāṇī-anusandhāna** — *the careful inquiry through the teacher
 ```mermaid
 graph TD
 
-subgraph ING["Ingestion pipeline (one-time, local)"]
-  YT[YouTube playlist] --> DL[yt-dlp<br/>audio extract]
-  DL --> WH[mlx-whisper large-v3<br/>+ Sanskrit prompt]
-  WH --> TR[Transcript JSON<br/>word timestamps]
-  TR --> CH[Sentence chunking<br/>~60s, 15s overlap]
-  CH --> SN[Sanskrit normalize<br/>fuzzy dictionary]
-  SN --> EM[bge-m3 embed<br/>dense + sparse]
-  EM --> QD[(Qdrant<br/>hybrid index)]
+subgraph ING["🔄  Ingestion pipeline — one-time · Apple Silicon · ~12× realtime"]
+  YT(["📺 YouTube Playlist<br/>25 → 5,000 lectures<br/>playlist URL only"])
+  DL["yt-dlp<br/>audio-only extract<br/>MP3 · best quality · no video"]
+  WH["mlx-whisper large-v3<br/>Apple GPU + Neural Engine<br/>Sanskrit initial_prompt · lang=en · temp=0"]
+  TR[/"Transcript JSON<br/>full text + timed segments<br/>word-level timestamps"/]
+  CH[/"Sentence-aware chunks<br/>~60s windows · 15s overlap<br/>cut at sentence boundary · not mid-word"/]
+  SN["Sanskrit normalize<br/>rapidfuzz ≥ 90% · exact + fuzzy<br/>normalization_dict.json · Layer 2 of 3"]
+  EM["bge-m3 embed<br/>dense 1024-dim + sparse BM25<br/>embeds text_normalized · batch_size=32"]
+  QD[("Qdrant<br/>hybrid vector index<br/>payload: video · timestamps · text")]
 end
 
-subgraph QRY["Query pipeline (real-time)"]
-  DV[Devotee asks] --> API[FastAPI<br/>/search endpoint]
-  API --> QE[bge-m3 embed<br/>query vectorize]
-  QE --> QS[Qdrant hybrid search<br/>top-20]
-  QS --> RR[Cross-encoder rerank<br/>bge-reranker-v2-m3]
-  RR --> MG[Merge adjacent<br/>same video &lt;30s gap]
-  MG --> R4[Top 4 results<br/>YouTube deep-link + range]
-  R4 --> DV2[Devotee listens<br/>jumps to t=754s]
+subgraph QRY["⚡  Query pipeline — real-time · target &lt; 1.5 s end-to-end"]
+  DV(["🙏 Devotee asks<br/>natural language question<br/>any Sanskrit spelling accepted"])
+  API["FastAPI  /search<br/>POST · JSON · top_k = 4<br/>/health · CORS · models loaded at startup"]
+  QE["bge-m3 embed<br/>same model · same vector space<br/>dense + sparse query vectors"]
+  QS[("Qdrant hybrid search<br/>dense cosine + sparse BM25<br/>retrieves top-20 candidates")]
+  RR["Cross-encoder rerank<br/>bge-reranker-v2-m3<br/>full query text × each chunk · more accurate"]
+  MG["Merge adjacent segments<br/>same video · gap &lt; 30 s<br/>avoids near-duplicate results"]
+  R4["Top 4 results<br/>YouTube deep-link · ?v=ID&amp;t=Ns<br/>timestamp range · transcript snippet"]
+  DV2(["🎧 Devotee listens<br/>jumps to exact moment<br/>teacher's actual words · no paraphrase"])
 end
 
-QD -.->|Persisted on disk| QS
+YT    -->|"playlist URL"| DL
+DL    -->|"MP3 audio"| WH
+WH    -->|"JSON + word timestamps"| TR
+TR    -->|"segments"| CH
+CH    -->|"~60 s chunks"| SN
+SN    -->|"text_normalized"| EM
+EM    -->|"dense + sparse vectors"| QD
 
-classDef compute fill:#E6F1FB,stroke:#185FA5,color:#042C53
-classDef storage fill:#EEEDFE,stroke:#534AB7,color:#26215C
-classDef quality fill:#FAECE7,stroke:#993C1D,color:#4A1B0C
-classDef data fill:#E1F5EE,stroke:#0F6E56,color:#04342C
-classDef output fill:#FAEEDA,stroke:#854F0B,color:#412402
-classDef devotee fill:#F1EFE8,stroke:#5F5E5A,color:#2C2C2A
+DV    --> API
+API   -->|"query string"| QE
+QE    -->|"query vectors"| QS
+QS    -->|"top-20 candidates"| RR
+RR    -->|"reranked scores"| MG
+MG    -->|"merged clips"| R4
+R4    --> DV2
+
+QD    -.->|"Persisted on disk"| QS
+
+classDef compute  fill:#DBEAFE,stroke:#1D4ED8,color:#1E3A5F,stroke-width:2px,font-weight:bold
+classDef storage  fill:#EDE9FE,stroke:#6D28D9,color:#2E1065,stroke-width:2px,font-weight:bold
+classDef quality  fill:#FEE2E2,stroke:#DC2626,color:#7F1D1D,stroke-width:2px,font-weight:bold
+classDef data     fill:#D1FAE5,stroke:#059669,color:#064E3B,stroke-width:2px,font-weight:bold
+classDef output   fill:#FEF3C7,stroke:#D97706,color:#78350F,stroke-width:2px,font-weight:bold
+classDef devotee  fill:#F3F4F6,stroke:#6B7280,color:#1F2937,stroke-width:2px,font-weight:bold
 
 class DL,WH,EM,API,QE compute
 class QD,QS storage
@@ -80,6 +98,8 @@ class TR,CH data
 class R4 output
 class YT,DV,DV2 devotee
 ```
+
+**Color key** — 🔵 blue: compute steps &nbsp;·&nbsp; 🟣 purple: vector storage &nbsp;·&nbsp; 🔴 red: quality/Sanskrit layers &nbsp;·&nbsp; 🟢 green: data artifacts &nbsp;·&nbsp; 🟡 amber: output &nbsp;·&nbsp; ⚪ gray: devotee endpoints
 
 ### 🔄 Ingestion pipeline (one-time, ~12x realtime on Apple Silicon M5)
 
