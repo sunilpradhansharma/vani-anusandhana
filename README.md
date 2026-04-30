@@ -39,12 +39,11 @@ Semantic search over a single spiritual teacher's YouTube lectures. Devotees ask
 
 ## User experience
 
-vāṇī-anusandhāna is designed mobile-first. Devotees searching from a phone
-during morning sādhana, evening reflection, or while traveling should feel
-the difference between this and a generic AI tool the moment they arrive.
-The interface is calm, reverent, and purposeful — the teacher's words are
-the visual hero, and the search machinery quietly steps aside once results
-arrive.
+vāṇī-anusandhāna is a responsive web app — accessible from phone, tablet,
+or desktop. The interface is calm, reverent, and purposeful: the teacher's
+words are the visual hero, and the search machinery quietly steps aside once
+results arrive. The palette draws from Vaiṣṇava aesthetics — deep
+purple-indigo on pale lavender-white, with gold for sacred accents.
 
 <div align="center">
 <table>
@@ -53,93 +52,84 @@ arrive.
 
 **Home — the invitation**
 
-<img src="assets/mock1.png" width="320" alt="vāṇī-anusandhāna home screen on mobile showing the logo, search box with 'Ask your question…' placeholder, and a Tulasi-leaf illustration above an invitational verse"/>
+<img src="assets/m1.png" width="320" alt="vāṇī-anusandhāna home screen: logo, wordmark, search field with purple submit button, and a devotional tagline"/>
 
-<sub>Hero logo · disciplined-inquiry tagline · invitational verse · Tulasi-leaf motif</sub>
+<sub>Hero logo · disciplined-inquiry tagline · single-purpose search</sub>
 
 </td>
 <td align="center" valign="top" width="50%">
 
-**Results — with full transcript**
+**Loading — inquiry being received**
 
-<img src="assets/mock2.png" width="320" alt="vāṇī-anusandhāna search results screen showing an embedded video player with timestamp range, the result title and metadata, a transcript snippet with Sanskrit terms highlighted, and three icon actions for favorite, share, and copy"/>
+<img src="assets/m2.png" width="320" alt="Loading state: three pulsing dots in accent purple with a Georgia-serif holding line"/>
 
-<sub>Embedded YouTube · transcript with Devanagari hover · favorite, share, copy timestamp</sub>
+<sub>Calm, not anxious — pulsing dots in accent purple, Georgia serif</sub>
+
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+
+**Results — desktop two-panel layout**
+
+<img src="assets/m3.png" width="320" alt="Desktop results: sidebar listing passages on the left, main panel with hero answer, tilaka divider, embedded video, and transcript on the right"/>
+
+<sub>Sidebar passage list · embedded video · transcript with Sanskrit terms</sub>
+
+</td>
+<td align="center" valign="top" width="50%">
+
+**Results — mobile single column**
+
+<img src="assets/m4.png" width="320" alt="Mobile results: hero answer, tilaka divider, top match with embedded video and transcript, compact list below"/>
+
+<sub>Same content reorganised vertically for phone</sub>
+
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+
+**No results — this topic has not appeared**
+
+<img src="assets/m5.png" width="320" alt="No results state: tilaka motif holds quiet space with suggested related concepts"/>
+
+<sub>Reverent, not apologetic — suggested related concepts</sub>
+
+</td>
+<td align="center" valign="top" width="50%">
+
+**Error — graceful retry**
+
+<img src="assets/m6.png" width="320" alt="Error state: calm message with a simple retry button"/>
+
+<sub>Calm message, simple retry — no alarm, no jargon</sub>
 
 </td>
 </tr>
 </table>
 </div>
 
-### How a devotee uses it
-
-1. **Opens the app on their phone.** Sees the logo, the wordmark in maroon
-   serif, and a single search box. Below it: a Tulasi-leaf illustration and
-   a quiet verse — *"Through this inquiry, the seeker feels the teacher's
-   guidance speaking through his own lectures."*
-
-2. **Types a question** in plain language: *"What is the difference between
-   śravaṇa and smaraṇa?"* — no special syntax, no special keywords.
-
-3. **Sees four results within a second.** Each result is a card with:
-   - The teacher's actual lecture title
-   - An embedded YouTube player ready to play from the exact moment
-   - A timestamp range like *12:34 → 13:42* showing the duration of the
-     relevant passage
-   - The full transcript of that 60–90 seconds — readable, in serif, with
-     Sanskrit terms gently highlighted
-   - Three small actions: favorite, share, copy timestamp
-
-4. **Taps a Sanskrit term** in the transcript and a small popover appears
-   showing the term in Devanagari (श्रवण) with a brief gloss ("listening,
-   hearing"). For devotees who want all Sanskrit shown in Devanagari
-   inline, a toggle in the header switches the display globally.
-
-5. **Saves a passage** to favorites, shares it with a fellow devotee, or
-   copies a deep-link timestamp to revisit later. All saved data lives on
-   their device — no account required.
-
 ### Designed for the way devotees actually search
 
-📱 **Mobile-first.** Single column, large tap targets, transcripts that
-read like a book, not a webpage. Most devotees will use this from a phone
-during quiet moments of practice — the design assumes that, not the
-opposite.
-
-🎬 **Embedded video + transcript together.** Click a result and the player
-and the teacher's transcribed words appear together in context — no
-jumping to YouTube and losing your place. A secondary "Open in YouTube"
-link is always available for those who prefer the YouTube app.
-
-🪷 **Calm, devotional aesthetic.** Cream and saffron with deep maroon text.
-Georgia serif for the teacher's words. Subtle Tulasi-leaf motif in the
-empty state — the only ornamental flourish; everything else relies on
-typography and color.
-
-🔤 **Sanskrit-aware typography.** Tap any Sanskrit term to see its
-Devanagari spelling and a brief gloss. Optional toggle to show Devanagari
-for all terms inline. Sanskrit diacritics (ā, ṇ, ī, ś) render correctly
-across the entire interface.
-
-💝 **Personal practice tools.** Search history, favorited passages, one-tap
-sharing via the Web Share API, copy-deeplink-with-timestamp — everything
-stored locally on your device. Optional sync across devices is on the
-roadmap; v1 is fully local-first.
-
-🤐 **No ads, no tracking, no AI-generated answers.** What you see is what
-HH Romapada Swami said. Nothing added, nothing inferred. No analytics
-beacons, no third-party scripts, no fingerprinting.
+- 📱 **Responsive layout.** Single column on mobile, two-panel reading layout on desktop — transcripts are always the visual hero.
+- 🎬 **Embedded video + transcript together.** Results show the teacher's words and the YouTube player side by side in context — no jumping to a new tab and losing your place.
+- 🪷 **Calm, devotional aesthetic.** Deep purple-indigo on pale lavender-white with gold accents. Georgia serif for the teacher's words. Every state — including loading, no-results, and error — is designed to feel sacred, not clinical.
+- 🔤 **Sanskrit-aware typography.** Tap any Sanskrit term to see its Devanagari spelling and a brief gloss. Optional toggle to show Devanagari for all terms inline.
+- 💝 **Personal practice tools.** Search history, favorited passages, one-tap sharing, copy-deeplink-with-timestamp — everything stored locally on your device.
+- 🤐 **No ads, no tracking, no AI-generated answers.** What you see is what HH Romapada Swami said. Nothing added, nothing inferred.
 
 ### Visual identity
 
 | Token | Hex | Use |
 |---|---|---|
-| Cream | `#FBF6EC` | Page background |
-| Cream-soft | `#FFFCF6` | Card surface, input background |
-| Saffron | `#E8862A` | Primary accent, toggles, badges |
-| Maroon | `#5C1A1A` | Primary text, primary buttons |
-| Gold | `#C49B3F` | Logo accents, dotted underlines |
-| Brown-warm | `#8B6F47` | Secondary text, metadata |
+| Canvas | `#F8F6FB` | Page background |
+| Card | `#FFFFFF` | Card surface, input background |
+| Accent | `#6B5B95` | Primary accent, icons, badges, labels |
+| Accent deep | `#4D3F75` | Primary text, primary buttons |
+| Gold | `#C9A961` | Sacred accents, dotted underlines |
+| Text | `#2C2438` | Body text, transcripts |
+| Text muted | `#8A7FA3` | Secondary text, metadata |
 
 **Typography stack:**
 - **Body & transcripts:** Georgia, Charter, Iowan Old Style — serif, like a book
@@ -152,7 +142,7 @@ beacons, no third-party scripts, no fingerprinting.
 - ❌ No AI-generated answers, summaries, or paraphrases — retrieval only
 - ❌ No autocomplete in v1 (resist scope creep; add later if devotees ask)
 - ❌ No social-network features (likes, comments, public profiles)
-- ❌ No dark mode in v1 (the warm Vaiṣṇava palette is a daylight palette by design)
+- ❌ No dark mode in v1 (the Vaiṣṇava palette is a daylight palette by design)
 - ❌ No multi-language UI in v1 (English with optional Sanskrit Devanagari)
 - ❌ No login required for basic search (favorites/history live on device)
 
