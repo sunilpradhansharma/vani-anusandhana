@@ -47,7 +47,7 @@ the visual hero, and the search machinery quietly steps aside once results
 arrive.
 
 <div align="center">
-<img src="docs/mockups/home_screen.png" width="300" alt="Home screen — logo, search box, invitational verse"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="docs/mockups/results_screen.png" width="300" alt="Results screen — embedded video, transcript, timestamp"/>
+<img src="assets/mock1.png" width="300" alt="Home screen — logo, search box, invitational verse"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/mock2.png" width="300" alt="Results screen — embedded video, transcript, timestamp"/>
 
 *Home — the invitation* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Results — with full transcript*
 </div>
